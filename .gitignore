@@ -7,3 +7,5 @@
 .Trashes
 ehthumbs.db
 Thumbs.dbgit 
+.env
+config.js

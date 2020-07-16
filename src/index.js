@@ -1,5 +1,8 @@
-import CurrentWeather from './models/CurrentWeatherModel';
+import CurrentWeather from './models/Search';
+import Search from './models/Search';
 
-const currentWeather = new CurrentWeather('It is currently 30 degrees celsius');
+const state = {};
 
-window.addEventListener('load', currentWeather.printString);
+state.searchQuery = new Search('san diego');
+
+state.searchQuery.searchCity();
