@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,700;1,400&display=swap');
+
+
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: hsl(0,0%,91.8%);
+}
+
+.container{
+    background-color: hsl(0,0%,100%);
+    border-radius: 20px;
+    position: relative;
+    top: 14em;
+    height: 60vh;
+    -webkit-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
+    -moz-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
+    box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
+}
+
+header{
+    height: 7vh;
+    background-color: hsl(0,0%,96.1%);
+    border-radius: 20px 20px 0 0;
+    padding: 25px 5px 0 36px;
+}
+
+#first__row{
+    height: 20vh;
+}
+
+#first__row p {
+    font-size: 5em;
+}
+
+
+#current__weather h2, h3, h4{
+    margin: 0;
+}
+
+#current__weather h2{
+    font-size: 2em;
+}
+
+#current__weather h3{
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+#current__weather h4{
+    font-size: 1em;
+    font-weight: 700;
+}
+
+#current__text{
+    position: relative;
+    top: 1em;
+    left: 2em;
+}
+
+#weather__icon{
+    height: 10em;
+    width: 10em;
+    position: relative;
+    top: 3em;
+    left: 2em;
+}
+
+hr{
+    width: 75%;
+    border-width: 3px;
+    border-radius: 10px;
+}

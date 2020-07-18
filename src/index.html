@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Solerr</title>
 </head>
-<body>
-    
 
+<body>
+    <main class="container">
+        <header class="row">
+            <h1 class="two columns">solerr</h1>
+            <input class="eight columns" type="text" placeholder="Search for your city!">
+            <button class="two coluumns">Search!</button>
+        </header>
+        <section>
+            <section id="first__row" class="row">
+                <div class="six columns">
+                    <div id="current__weather">
+                        <div id="current__text">
+                            <h2>San Diego, CA</h2>
+                            <h3>Friday</h3>
+                            <h4>Sunny</h4>
+                        </div>
+                        <img id="weather__icon" src="./img/weatherIcons/sun.svg" alt="Sunny">
+                        <p>80°F</p>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <h2>Hello, World 2!</h2>
+                </div>
+            </section>
+            <hr>
+            <section id="second__row" class="row">
+                <div class="twelve columns">
+                    <h2>Hello, World 3!</h2>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
     <script src="./index.js"></script>
 </body>
+
 </html>

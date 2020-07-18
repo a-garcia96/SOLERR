@@ -6,3 +6,5 @@ const state = {};
 state.searchQuery = new Search('san diego');
 
 state.searchQuery.searchCity();
+
+console.log(state.searchQuery);
