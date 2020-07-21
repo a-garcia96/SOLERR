@@ -35,8 +35,13 @@ header{
     height: 20vh;
 }
 
-#first__row p {
-    font-size: 5em;
+
+#current__weather p {
+    position: relative;
+    bottom: 1.65em;
+    left: 43%;
+    font-size: 4em;
+    margin: 0;
 }
 
 
@@ -68,7 +73,7 @@ header{
     height: 10em;
     width: 10em;
     position: relative;
-    top: 3em;
+    top: 2em;
     left: 2em;
 }
 
