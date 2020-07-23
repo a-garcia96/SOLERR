@@ -82,3 +82,23 @@ hr{
     border-width: 3px;
     border-radius: 10px;
 }
+
+#second__row{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#second__row .weather__card{
+    margin-left: 6%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.weather__icon{
+    width: 80%;
+    height: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
