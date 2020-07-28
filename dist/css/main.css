@@ -13,6 +13,24 @@ body{
     background-color: hsl(0,0%,91.8%);
 }
 
+.blob{
+    position: absolute;
+}
+
+#blob__1{
+    left: 0;
+    top: 15%;
+    width: 50%;
+    height: auto;
+}
+
+#blob__2{
+    bottom: 15%;
+    right: 0;
+    width: 50%;
+    height: auto;
+}
+
 .container{
     background-color: hsl(0,0%,100%);
     border-radius: 20px;

@@ -8,7 +8,7 @@ export default class Search {
         this.city = city;
     }
 
-    async searchCity(){
+    async getWeather(){
         try{
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=imperial&APPID=${api_key}`);
             this.data = response.data

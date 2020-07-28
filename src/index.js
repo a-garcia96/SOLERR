@@ -1,10 +1,30 @@
-import CurrentWeather from './models/Search';
 import Search from './models/Search';
+import * as searchView from './views/searchView';
+import {elements} from './views/elements';
 
 const state = {};
 
-state.searchQuery = new Search('san diego');
 
-state.searchQuery.searchCity();
+const search = async () => {
+    const query = searchView.getInput();
 
-console.log(state.searchQuery);
+    if(query){
+        console.log(query);
+        state.search = new Search(query);
+
+        try{
+            await state.search.getWeather();
+        } catch (error) {
+            alert(`${error}: Could not find city please try another!`)
+        }
+
+        console.log(state.search.data.main);
+    }
+}
+
+elements.searchForm.addEventListener('click', e => {
+    e.preventDefault();
+    if(e.target.matches('[type="submit"]')){
+        search();
+    }
+});
