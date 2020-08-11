@@ -35,8 +35,8 @@ body{
     background-color: hsl(0,0%,100%);
     border-radius: 20px;
     position: relative;
-    top: 14em;
-    height: 60vh;
+    top: 8em;
+    height: 75vh;
     -webkit-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
     -moz-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
     box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
@@ -50,7 +50,7 @@ header{
 }
 
 #first__row{
-    height: 20vh;
+    height: 26vh;
 }
 
 
@@ -102,8 +102,6 @@ hr{
 }
 
 #second__row{
-    padding-left: 5%;
-    padding-right: 5%;
     padding-top: 0;
     padding-bottom: 0;
 }

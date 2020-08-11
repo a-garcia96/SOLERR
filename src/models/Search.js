@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {api_key} from '../config';
+import * as apiKeys from '../config';
 
 //https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=imperial&APPID=${API_KEY};
 
@@ -10,10 +10,20 @@ export default class Search {
 
     async getWeather(){
         try{
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=imperial&APPID=${api_key}`);
-            this.data = response.data
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=imperial&APPID=${apiKeys.currentWeatherKey}`);
+            this.currentWeatherData = response.data.main;
         } catch(error){
             console.log(`We ran into an error: ${error}`);
+        }
+    }
+
+    async getForecast(){
+        try{
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.city}&units=imperial&cnt=5&appid=${apiKeys.forecastWeatherKey}`);
+            
+            this.weatherForecast = response.data.list.map(el => el.temp);
+        } catch (error){
+            console.log(`fetching forecast has failed: ${error}`)
         }
     }
 }
