@@ -19,16 +19,16 @@ const search = async () => {
             alert(`${error}: Could not find city please try another!`)
         }
 
-        console.log(state.search);
+        console.log(state);
     }
 }
 
 // EVENT LISTENER TO TRIGGER SEARCH
 
-elements.searchForm.addEventListener('click', e => {
+elements.searchForm.addEventListener('click', async e => {
     e.preventDefault();
     if(e.target.matches('[type="submit"]')){
-        search();
-        searchView.renderFiveDayForecast();
+        await search();
+        searchView.renderFiveDayForecast(state.search.weatherForecast);
     }
 });

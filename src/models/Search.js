@@ -19,9 +19,9 @@ export default class Search {
 
     async getForecast(){
         try{
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.city}&units=imperial&cnt=5&appid=${apiKeys.forecastWeatherKey}`);
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.city}&units=imperial&cnt=6&appid=${apiKeys.forecastWeatherKey}`);
             
-            this.weatherForecast = response.data.list.map(el => el.temp);
+            this.weatherForecast = response.data.list.map(el => el.temp).slice(1);
         } catch (error){
             console.log(`fetching forecast has failed: ${error}`)
         }
