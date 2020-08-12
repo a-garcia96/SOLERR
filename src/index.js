@@ -1,13 +1,14 @@
 import Search from './models/Search';
-import * as searchView from './views/searchView';
+import * as forecastView from './views/forecastView';
 import {elements} from './views/elements';
+import * as currentView from './views/currentView';
 
 const state = {};
 
 //SEARCH FUNCTION
 
 const search = async () => {
-    const query = searchView.getInput();
+    const query = forecastView.getInput();
 
     if(query){
         state.search = new Search(query);
@@ -28,7 +29,10 @@ const search = async () => {
 elements.searchForm.addEventListener('click', async e => {
     e.preventDefault();
     if(e.target.matches('[type="submit"]')){
+        forecastView.clearForecast();
+        currentView.clearCurrentView();
         await search();
-        searchView.renderFiveDayForecast(state.search.weatherForecast);
+        currentView.renderCurrentView(state.search.currentWeatherData);
+        forecastView.renderFiveDayForecast(state.search.weatherForecast);
     }
 });

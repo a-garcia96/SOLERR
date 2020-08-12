@@ -11,7 +11,7 @@ export default class Search {
     async getWeather(){
         try{
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=imperial&APPID=${apiKeys.currentWeatherKey}`);
-            this.currentWeatherData = response.data.main;
+            this.currentWeatherData = response.data;
         } catch(error){
             console.log(`We ran into an error: ${error}`);
         }
@@ -20,7 +20,6 @@ export default class Search {
     async getForecast(){
         try{
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.city}&units=imperial&cnt=6&appid=${apiKeys.forecastWeatherKey}`);
-            
             this.weatherForecast = response.data.list.map(el => el.temp).slice(1);
         } catch (error){
             console.log(`fetching forecast has failed: ${error}`)

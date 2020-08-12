@@ -27,7 +27,7 @@ const createForecastMarkup = (day, forecastEl) => {
             <img class="weather__icon" src="./img/weatherIcons/sun.svg" alt="Sunny">
         </div>
         <div>
-            <p> HIGH: ${Math.floor(forecastEl.max)} | LOW: ${Math.floor(forecastEl.min)} </p>
+            <p> HIGH: ${Math.floor(forecastEl.max)}<sup>°F</sup> | LOW: ${Math.floor(forecastEl.min)}<sup>°F</sup> </p>
         </div>
     </div>
     `;
@@ -37,4 +37,8 @@ export const renderFiveDayForecast = (forecastArray) => {
     findNextFiveDays().forEach((day, index) => {
         elements.forecastSection.insertAdjacentHTML('beforeend', createForecastMarkup(day, forecastArray[index]));
     });
+}
+
+export const clearForecast = () => {
+    elements.forecastSection.innerHTML = '';
 }
