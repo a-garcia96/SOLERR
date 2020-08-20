@@ -53,12 +53,17 @@ header{
     height: 26vh;
 }
 
+#current__weather {
+    position: absolute;
+    left: 0;
+    padding: 1em;
+}
 
 #current__weather p {
     position: relative;
     bottom: 1.65em;
-    left: 43%;
-    font-size: 4em;
+    left: 140%;
+    font-size: 3em;
     margin: 0;
 }
 
@@ -88,8 +93,8 @@ header{
 }
 
 #weather__icon{
-    height: 10em;
-    width: 10em;
+    height: 8em;
+    width: 8em;
     position: relative;
     top: 2em;
     left: 2em;

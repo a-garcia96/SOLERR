@@ -24,10 +24,10 @@ const createForecastMarkup = (day, forecastEl) => {
     <div class="two columns weather__card">
         <h3>${day}</h3>
         <div>
-            <img class="weather__icon" src="./img/weatherIcons/sun.svg" alt="Sunny">
+            <img class="weather__icon" src="http://openweathermap.org/img/wn/${forecastEl.main.icon}@2x.png" alt="">
         </div>
         <div>
-            <p> HIGH: ${Math.floor(forecastEl.max)}<sup>°F</sup> | LOW: ${Math.floor(forecastEl.min)}<sup>°F</sup> </p>
+            <p> HIGH: ${Math.floor(forecastEl.temperature.max)}<sup>°F</sup> | LOW: ${Math.floor(forecastEl.temperature.min)}<sup>°F</sup> </p>
         </div>
     </div>
     `;

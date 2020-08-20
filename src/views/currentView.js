@@ -11,7 +11,7 @@ return `
         <h3>${moment().format('dddd')}</h3>
         <h4>${searchObj.weather[0].main}</h4>
     </div>
-    <img id="weather__icon" src="./img/weatherIcons/sun.svg" alt="Sunny">
+    <img id="weather__icon" src="http://openweathermap.org/img/wn/${searchObj.weather[0].icon}@2x.png" alt="">
     <p>${Math.floor(searchObj.main.temp)}<sup>°F</sup></p>
 </div>
 `

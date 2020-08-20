@@ -19,8 +19,6 @@ const search = async () => {
         } catch (error) {
             alert(`${error}: Could not find city please try another!`)
         }
-
-        console.log(state);
     }
 }
 
@@ -34,5 +32,7 @@ elements.searchForm.addEventListener('click', async e => {
         await search();
         currentView.renderCurrentView(state.search.currentWeatherData);
         forecastView.renderFiveDayForecast(state.search.weatherForecast);
+
+        console.log(state.search.currentWeatherData);
     }
 });
