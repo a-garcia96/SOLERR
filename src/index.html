@@ -3,45 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/skeleton.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
     <title>Solerr</title>
 </head>
 
 <body>
-    <main class="container">
-        <header class="row">
-            <h1 class="two columns">solerr</h1>
-            <form class="search__form" action="">
-                <input id="city__input" class="eight columns" type="text" placeholder="Search for your city!">
-                <input type="submit">
-            </form>
-        </header>
-        <section>
-            <section id="first__row" class="row">
-                <div id="current__weather__section" class="six columns">
-                    <!-- <div id="current__weather">
-                        <div id="current__text">
-                            <h2>San Diego, CA</h2>
-                            <h3>Friday</h3>
-                            <h4>Sunny</h4>
-                        </div>
-                        <img id="weather__icon" src="./img/weatherIcons/sun.svg" alt="Sunny">
-                        <p>80<sup>°F</sup></p>
-                    </div> -->
+    <div class="">
+        <main class="container">
+            <header class="row p-5">
+                <div class="col-md">
+                    <h1 class="float-left">solerr</h1>
+                    <form class="search__form float-right" action="">
+                        <input id="city__input" type="text" placeholder="Search for your city!">
+                        <input type="submit">
+                    </form>
                 </div>
-                <div class="six columns">
-                    <!-- <h2>Hello, world 2!</h2> -->
-                </div>
+            </header>
+            <section class="p-5">
+                <section id="first__row" class="row">
+                    <div id="current__weather__section" class="col-md">
+                        <!-- <div id="current__weather">
+                            <div id="current__text">
+                                <h2>San Diego, CA</h2>
+                                <h3>Friday</h3>
+                                <h4>Sunny</h4>
+                            </div>
+                            <img id="weather__icon" src="./img/weatherIcons/sun.svg" alt="Sunny">
+                            <p>80<sup>°F</sup></p>
+                        </div> -->
+                    </div>
+                    <div class="col-md text-center text-md-right my-4 my-md-0">
+                        <h2>Weather Details</h2>
+                        <h3>Humidity: 00%</h3>
+                        <h3>Wind Speeds: 00%</h3>
+                        <button type="button" class="btn btn-primary">°F</button>
+                        <button type="button" class="btn btn-secondary">°C</button>
+                    </div>
+                </section>
+                <hr>
+                <section id="second__row" class="row"></section>
             </section>
-            <hr>
-            <section id="second__row" class="row"></section>
+    
+        </main>
+    </div>
 
-        </section>
-
-    </main>
     <script src="./index.js"></script>
 </body>
 

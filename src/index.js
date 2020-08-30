@@ -34,14 +34,6 @@ elements.searchForm.addEventListener('click', async e => {
         forecastView.renderFiveDayForecast(state.search.weatherForecast);
 
         console.log(state.search.currentWeatherData);
+
     }
 });
-
-
-const load = () => {
-    const height = window.screen.height;
-    const width = window.screen.width;
-    console.log(`screen specs: The height is: ${height} and the width is: ${width}`);
-}
-
-window.onload = load;

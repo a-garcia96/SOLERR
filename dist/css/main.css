@@ -1,3 +1,11 @@
+/* 
+    Design begins with desktop and is responsive down to mobile.
+
+    Initial thoughts are that mobile design I may want to just not support and instead display
+    a message that notifies a user that the app has detected a mobile screen and to please access
+    the app via a desktop display? Just thoughts for now....
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,700;1,400&display=swap');
 
 
@@ -11,120 +19,51 @@ p{
 
 body{
     background-color: hsl(0,0%,91.8%);
+    height: 100%;
+    width: 100%;
 }
 
 .container{
     background-color: hsl(0,0%,100%);
+    min-height: 65.68vh;
     border-radius: 20px;
-    position: relative;
-    top: 45em;
-    height: 40vh;
-    width: 100vh;
     -webkit-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
     -moz-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
     box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.38);
 }
 
-header{
-    height: 6vh;
-    background-color: hsl(0,0%,96.1%);
+header {
+    background-color: #E8DAB2;
     border-radius: 20px 20px 0 0;
-    padding: 25px 5px 0 36px;
 }
 
-header h1{
-    margin-top: 3%;
+hr {
+    border: 1px solid #4F6D7A;
 }
 
-input#city__input {
-    margin-left: 15%;
-    width: 50%;
-    margin-right: 3%;
-    margin-top: 5%;
+.btn-primary{
+    background-color: #DD6E42;
+    border: 1px solid #DD6E42;
 }
 
-.search__form input[type="submit"]{
-    margin-top: 4%;
+.btn-primary:hover{
+    background-color: #DD6E42;
 }
 
-#first__row{
-    height: 18em;
-}
-
-#current__weather {
-    position: absolute;
-    left: 0;
-    padding: 1em;
-}
-
-#current__weather p {
-    position: relative;
-    bottom: 1.65em;
-    left: 140%;
-    font-size: 3em;
-    margin: 0;
-}
-
-
-#current__weather h2, h3, h4{
-    margin: 0;
-}
-
-#current__weather h2{
-    font-size: 2em;
-}
-
-#current__weather h3{
-    font-size: 1.5em;
-    font-weight: 300;
-}
-
-#current__weather h4{
-    font-size: 1em;
-    font-weight: 700;
-}
-
-#current__text{
-    position: relative;
-    top: 1em;
-    left: 2em;
-}
-
-#weather__icon{
-    height: 8em;
-    width: 8em;
-    position: relative;
-    top: 2em;
-    left: 2em;
-}
-
-hr{
-    width: 75%;
-    border-width: 1px;
-    border-radius: 10px;
-}
-
-#second__row{
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-#second__row .weather__card{
-    margin-left: 6%;
-    text-align: center;
-    font-size: 0.8em;
-}
-
-.weather__icon{
-    width: 80%;
-    height: auto;
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-@media screen and (max-width: 1792px) {
+@media screen and (min-width: 720px){
     .container{
-        top: 18em;
-        height: 60vh;
+        margin-top: 10%;
+    }
+
+    .container section{
+        height: 53.52vh;
+    }
+
+    #first__row{
+        height: 21.04vh;
+    }
+
+    #second__row{
+        height: 32.48vh;
     }
 }

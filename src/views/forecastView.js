@@ -21,7 +21,7 @@ const findNextFiveDays = () => {
 
 const createForecastMarkup = (day, forecastEl) => {
     return `
-    <div class="two columns weather__card">
+    <div class="col-md text-center weather__card my-2">
         <h3>${day}</h3>
         <div>
             <img class="weather__icon" src="http://openweathermap.org/img/wn/${forecastEl.main.icon}@2x.png" alt="">
