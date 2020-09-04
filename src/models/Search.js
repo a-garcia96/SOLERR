@@ -6,6 +6,7 @@ import * as apiKeys from '../config';
 export default class Search {
     constructor(city){
         this.city = city;
+        this.isFahrenheit = true;
     }
 
     async getWeather(){
@@ -22,7 +23,7 @@ export default class Search {
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${this.city}&units=imperial&cnt=6&appid=${apiKeys.forecastWeatherKey}`);
             this.weatherForecast = response.data.list.map(el => {return {temperature: el.temp, main: el.weather[0]}}).slice(1);
         } catch (error){
-            console.log(`fetching forecast has failed: ${error}`)
+            console.log(`fetching forecast has failed: ${error}`);
         }
     }
 }

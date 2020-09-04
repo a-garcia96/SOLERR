@@ -41,13 +41,14 @@ hr {
     border: 1px solid #4F6D7A;
 }
 
-.btn-primary{
+.is__active {
     background-color: #DD6E42;
     border: 1px solid #DD6E42;
 }
 
-.btn-primary:hover{
-    background-color: #DD6E42;
+.is__active:hover {
+    background-color: #d36804;
+    border: 1px solid #d36804;
 }
 
 @media screen and (min-width: 720px){
