@@ -9,28 +9,35 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Solerr</title>
 </head>
+
 <body>
-    <div class="">
-        <main class="container">
-            <header class="row p-5">
-                <div class="col-md">
-                    <h1 class="float-left">SOLERR</h1>
-                    <form class="search__form float-right" action="">
-                        <input id="city__input" type="text" placeholder="Search for your city!">
-                        <input type="submit">
-                    </form>
+    <main class="container">
+        <header class="row p-5">
+            <div class="col-md">
+                <h1 class="float-md-left text-sm-center text-md-left">SOLERR</h1>
+                <div class="form-group search__form float-md-right" action="">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <input class="form-control text-center" id="city__input" type="text"
+                                placeholder="Search for your city!">
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control d-none d-lg-block" type="submit">
+                        </div>
+                    </div>
                 </div>
-            </header>
-            <section class="p-5">
-                <section id="first__row" class="row">
-                    <div id="current__weather__section" class="col-md"></div>
-                    <div id="weather__details" class="col-md text-center text-md-left my-4 my-md-0"></div>
-                </section>
-                <hr>
-                <section id="second__row" class="row"></section>
+            </div>
+        </header>
+        <section class="p-5">
+            <section id="first__row" class="row">
+                <div id="current__weather__section" class="col-md"></div>
+                <div id="weather__details" class="col-md text-center text-md-left my-4 my-md-0"></div>
             </section>
-        </main>
-    </div>
+            <hr>
+            <section id="second__row" class="row"></section>
+        </section>
+    </main>
     <script src="./index.js"></script>
 </body>
+
 </html>

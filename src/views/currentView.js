@@ -12,7 +12,7 @@ return `
         <h4>${searchObj.weather[0].main}</h4>
     </div>
     <img id="weather__icon" src="http://openweathermap.org/img/wn/${searchObj.weather[0].icon}@2x.png" alt="">
-    <p>HIGH: ${Math.floor(searchObj.main.temp_max)}<sup>°${isF ? 'f' : 'c'}</sup> | LOW: ${Math.floor(searchObj.main.temp_min)}<sup>°${isF ? 'f' : 'c'}</sup></p>
+    <p>H: ${Math.floor(searchObj.main.temp_max)}<sup>°${isF ? 'f' : 'c'}</sup> | L: ${Math.floor(searchObj.main.temp_min)}<sup>°${isF ? 'f' : 'c'}</sup></p>
 </div>
 `
 };

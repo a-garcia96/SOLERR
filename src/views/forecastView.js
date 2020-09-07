@@ -3,6 +3,10 @@ import {elements} from './elements';
 
 export const getInput = () => elements.cityInput.value;
 
+export const clearInput = () => {
+    elements.cityInput.value = '';
+}
+
 const findNextFiveDays = () => {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const today = new Date();
@@ -27,7 +31,7 @@ const createForecastMarkup = (day, forecastEl, isF) => {
             <img class="weather__icon" src="http://openweathermap.org/img/wn/${forecastEl.main.icon}@2x.png" alt="">
         </div>
         <div>
-            <p> HIGH: ${Math.floor(forecastEl.temperature.max)}<sup>°${isF ? 'f' : 'c'}</sup> | LOW: ${Math.floor(forecastEl.temperature.min)}<sup>°${isF ? 'f' : 'c'}</sup> </p>
+            <p> H: ${Math.floor(forecastEl.temperature.max)}<sup>°${isF ? 'f' : 'c'}</sup> | L: ${Math.floor(forecastEl.temperature.min)}<sup>°${isF ? 'f' : 'c'}</sup> </p>
         </div>
     </div>
     `;

@@ -37,6 +37,21 @@ header {
     border-radius: 20px 20px 0 0;
 }
 
+header h1 {
+    color: #4F6D7A;
+}
+
+[type=submit]:active{
+    background-color: #4F6D7A;
+    border: 1px solid #4F6D7A;
+}
+
+[type=submit]{
+    background-color: #4F6D7A;
+    border: 1px solid #4F6D7A;
+    color: white;
+}
+
 hr {
     border: 1px solid #4F6D7A;
 }
@@ -71,20 +86,64 @@ hr {
     border: 1px solid #48484A !important;
 }
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 320px) {
+    .text-sm-center {
+        text-align: center!important;
+    }
+    
     .container{
-        margin-top: 10%;
+        min-height: 100vh;
+        border-radius: 0;
     }
 
-    .container section{
-        height: 53.52vh;
+    header {
+        border-radius: 0;
     }
 
     #first__row{
-        height: 21.04vh;
+        min-height: 30vh;
     }
 
     #second__row{
-        height: 32.48vh;
+        min-height: 30vh;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .container{
+        margin-top: 8%;
+        border-radius: 20px;
+        min-height: 90vh;
+    }
+
+    header {
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        min-height: 80vh;
+    }
+
+    #first__row {
+        min-height: 28vh;
+    }
+
+    #second__row {
+        min-height: 18vh;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 2150px) {
+    .container{
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 2800px) {
+    .container {
+        margin-top: 3%;
     }
 }
