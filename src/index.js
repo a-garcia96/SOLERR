@@ -41,10 +41,21 @@ elements.searchForm.addEventListener('click', async e => {
 
 // EVENT LISTENERS TO TRIGGER CONVERTING UNITS TO C/F
 elements.weatherDetails.addEventListener('click', (e) => {
-    const activeBtn = e.target.closest('.is__active');
-    const inactiveBtn = e.target.closest('.inactive');
+    const measurement = e.target.dataset.measurement;
 
-    if(inactiveBtn){
+    if(measurement == 'c' && state.search.isFahrenheit){
+        detailsView.changeViewToC();
+        utilities.convertToC(state.search.currentWeatherData, state.search.weatherForecast, state.search);
+        forecastView.clearForecast();
+        currentView.clearCurrentView();
+        currentView.renderCurrentView(state.search.currentWeatherData, state.search.isFahrenheit);
+        forecastView.renderFiveDayForecast(state.search.weatherForecast, state.search.isFahrenheit);
+    } else if(measurement == 'f' && !state.search.isFahrenheit){
         detailsView.changeViewToF();
+        utilities.convertToF(state.search.currentWeatherData, state.search.weatherForecast, state.search);
+        forecastView.clearForecast();
+        currentView.clearCurrentView();
+        currentView.renderCurrentView(state.search.currentWeatherData, state.search.isFahrenheit);
+        forecastView.renderFiveDayForecast(state.search.weatherForecast, state.search.isFahrenheit);
     }
 });

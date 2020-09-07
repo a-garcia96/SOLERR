@@ -42,13 +42,33 @@ hr {
 }
 
 .is__active {
-    background-color: #DD6E42;
-    border: 1px solid #DD6E42;
+    background-color: #DD6E42 !important;
+    border: 1px solid #DD6E42 !important;
 }
 
 .is__active:hover {
-    background-color: #d36804;
-    border: 1px solid #d36804;
+    background-color: #d36804 !important;
+    border: 1px solid #d36804 !important;
+}
+
+.is__active:active{
+    background-color: #DD6E42 !important;
+    border: 1px solid #DD6E42 !important;
+}
+
+.inactive{
+    background-color: #48484A !important;
+    border: 1px solid #48484A !important;
+}
+
+.inactive:hover{
+    background-color: #48484A !important;
+    border: 1px solid #48484A !important;
+}
+
+.inactive:active{
+    background-color: #48484A !important;
+    border: 1px solid #48484A !important;
 }
 
 @media screen and (min-width: 720px){

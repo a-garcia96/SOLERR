@@ -11,16 +11,30 @@ const markup = (searchObj) => {
         <h2>Weather Details</h2>
         <h3>Humidity: ${searchObj.main.humidity}%</h3>
         <h3>Wind Speeds: ${Math.ceil(searchObj.wind.speed)} Mph</h3>
-        <button type="button" class="is__active mr-1 btn btn-primary">°F</button>
-        <button type="button" class="inactive ml-1 btn btn-secondary">°C</button>
+        <button type="button" class="is__active mr-1 btn btn-primary" data-measurement="f">°F</button>
+        <button type="button" class="inactive ml-1 btn btn-secondary" data-measurement="c">°C</button>
     ` 
 }
 
 export const changeViewToF = () => {
-    const activeBtn = document.querySelector('.is__active');
-    const inactiveBtn = document.querySelector('.inactive');
+    const activeBtn = document.querySelector('[data-measurement="c"]');
+    const inactiveBtn = document.querySelector('[data-measurement="f"]');
     
     activeBtn.classList.remove('is__active');
+    activeBtn.classList.add('inactive');
+
+    inactiveBtn.classList.remove('inactive');
+    inactiveBtn.classList.add('is__active');
+}
+
+export const changeViewToC = () => {
+    const activeBtn = document.querySelector('[data-measurement="f"]');
+    const inactiveBtn = document.querySelector('[data-measurement="c"]');
+
+    activeBtn.classList.remove('is__active');
+    activeBtn.classList.add('inactive');
+
+    inactiveBtn.classList.remove('inactive');
     inactiveBtn.classList.add('is__active');
 }
 
@@ -29,5 +43,5 @@ export const renderWeatherDetails = (searchObj) => {
 };
 
 export const clearWeatherDetails = () => {
-    elements.weatherDetails.innerHTML = ' ';
+    elements.weatherDetails.innerHTML = '';
 }
