@@ -17,10 +17,28 @@ p{
     font-family: 'Open Sans', sans-serif;
 }
 
+.blobs{
+    overflow: hidden;
+    position: absolute;
+}
+
+.blob-1 {
+    z-index: -1;
+    top: 0;
+    left: 30%;
+}
+
+.blob-2 {
+    z-index: -2;
+    bottom: 0;
+    right: 30%;
+}
+
 body{
     background-color: hsl(0,0%,91.8%);
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .container{
@@ -90,6 +108,10 @@ hr {
     .text-sm-center {
         text-align: center!important;
     }
+
+    body {
+        overflow: visible;
+    }
     
     .container{
         min-height: 100vh;
@@ -98,6 +120,10 @@ hr {
 
     header {
         border-radius: 0;
+    }
+
+    .blobs {
+        display: none;
     }
 
     #first__row{
@@ -110,6 +136,10 @@ hr {
 }
 
 @media screen and (min-width: 720px) {
+    body {
+        overflow: hidden;
+    }
+    
     .container{
         margin-top: 8%;
         border-radius: 20px;
@@ -118,6 +148,10 @@ hr {
 
     header {
         border-radius: 20px 20px 0 0;
+    }
+
+    .blobs {
+        display: block;
     }
 }
 
@@ -133,6 +167,12 @@ hr {
     #second__row {
         min-height: 18vh;
         margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 1750px) {
+    .container {
+        margin-top: 3%;
     }
 }
 
