@@ -11,7 +11,9 @@ const state = {};
 const search = async () => {
     const query = forecastView.getInput();
 
-    if (query) {
+    let regEx = /\D/gmi
+
+    if (query && regEx.test(query)) {
         state.search = new Search(query);
 
         try {
@@ -20,6 +22,8 @@ const search = async () => {
         } catch (error) {
             alert(`${error}: Could not find city please try another!`)
         }
+    } else {
+        alert('Zip codes are currently not supported');
     }
 
     forecastView.clearInput();
@@ -39,7 +43,6 @@ const renderAll = async () => {
 elements.searchForm.addEventListener('keyup', e => {
     if (e.keyCode == 13) {
         renderAll();
-        console.log(state);
     }
 });
 
