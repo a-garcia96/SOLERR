@@ -7,7 +7,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
-    "deploy": "ghpages.push('dist', function(err) {})"
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
